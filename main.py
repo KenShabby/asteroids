@@ -3,7 +3,7 @@ import pygame
 
 def main():
 
-    print(pygame.init())
+    pygame.init()
 
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
@@ -12,12 +12,12 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
     # Game Loop
-    while(True):
+    while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
 
-        pygame.Surface.fill(255, 0, 0, 0)
+        screen.fill("black")
         pygame.display.flip()
 
 if __name__ == "__main__":
